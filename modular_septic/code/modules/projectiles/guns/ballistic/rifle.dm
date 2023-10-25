@@ -405,6 +405,35 @@
 	semi_auto = TRUE
 	cylinder_shows_open = TRUE
 
+/obj/item/gun/ballistic/rifle/breakaction/musket
+	name = "Musket"
+	desc = "A powerful long ranged weapon able to put big holes into things."
+	icon = 'modular_septic/icons/obj/items/guns/musket.dmi'
+	inhand_icon_state = "musket"
+	base_icon_state = "musket"
+	icon_state = "musket"
+	worn_icon_state = "musket"
+	wielded_inhand_state = "musket"
+	w_class = WEIGHT_CLASS_HUGE
+	weapon_weight = WEAPON_MEDIUM
+	bolt_wording = "hammer"
+	cylinder_wording = "barrel"
+	rack_sound = list(
+		'modular_septic/sound/weapons/guns/revolver/hammer1.ogg', \
+		'modular_septic/sound/weapons/guns/revolver/hammer2.ogg', \
+	)
+	drop_sound = 'modular_septic/sound/weapons/guns/drop_lightgun.wav'
+	// close cylinder sound
+	lock_back_sound = 'modular_septic/sound/weapons/guns/shotgun/db_in.wav'
+	// open cylinder sound
+	bolt_drop_sound = 'modular_septic/sound/weapons/guns/shotgun/db_out.wav'
+	fire_sound = list('modular_septic/sound/weapons/guns/shotgun/comgun1.wav', 'modular_septic/sound/weapons/guns/shotgun/comgun2.wav')
+	load_sound = 'modular_septic/sound/weapons/guns/shotgun/db_load.wav'
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/musket
+	slot_flags = ITEM_SLOT_BACK
+	tetris_width = 64
+	tetris_height = 32
+
 //G36
 /obj/item/gun/ballistic/automatic/remis/g36
 	name = "\improper Perdedor 5.56 Void International Assault Rifle"

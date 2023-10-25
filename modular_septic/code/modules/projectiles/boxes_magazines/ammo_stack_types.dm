@@ -1,3 +1,4 @@
+// Pistol/Revolver Ammo Stacks
 /obj/item/ammo_box/magazine/ammo_stack/c38
 	name = "38 rounds"
 	icon_state = "c38-1"
@@ -97,6 +98,7 @@
 /obj/item/ammo_box/magazine/ammo_stack/aniquilador/loaded
 	start_empty = FALSE
 
+//Rifle/Sniper Ammo Stacks
 /obj/item/ammo_box/magazine/ammo_stack/a762
 	name = "7.62 rounds"
 	icon_state = "c762-1"
@@ -182,7 +184,7 @@
 	start_empty = FALSE
 
 /obj/item/ammo_box/magazine/ammo_stack/a276
-	name = "276 Federson rounds"
+	name = ".276 Federson rounds"
 	icon_state = "c762-1"
 	base_icon_state = "c762"
 	world_icon_state = "762-casing"
@@ -194,7 +196,7 @@
 	start_empty = FALSE
 
 /obj/item/ammo_box/magazine/ammo_stack/a276/inc
-	name = "276 incendiary Federson rounds"
+	name = ".276 incendiary Federson rounds"
 	icon_state = "c762-1"
 	base_icon_state = "c762"
 	world_icon_state = "762-casing"
@@ -205,6 +207,7 @@
 /obj/item/ammo_box/magazine/ammo_stack/a276/loaded
 	start_empty = FALSE
 
+//Shotgun Ammo Stacks
 /obj/item/ammo_box/magazine/ammo_stack/shotgun
 	name = "12 gauge buckshot"
 	icon_state = "12gauge-1"
@@ -253,6 +256,7 @@
 /obj/item/ammo_box/magazine/ammo_stack/shotgun/bolas/slugs/loaded
 	start_empty = FALSE
 
+// Energy Gun Ammo Stacks
 /obj/item/ammo_box/magazine/ammo_stack/batteries
 	name = "batteries"
 	icon = 'modular_septic/icons/obj/items/ammo/batteries.dmi'
@@ -272,4 +276,17 @@
 	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
 
 /obj/item/ammo_box/magazine/ammo_stack/shotgun/buckshot/loaded
+	start_empty = FALSE
+
+//Musket/Flintlock Ammo Stacks
+/obj/item/ammo_box/magazine/ammo_stack/a80
+	name = ".80 Musket Balls"
+	icon_state = "c762-1"
+	base_icon_state = "c762"
+	world_icon_state = "762-casing"
+	caliber = CALIBER_80
+	max_ammo = 8
+	ammo_type = /obj/item/ammo_casing/a80
+
+/obj/item/ammo_box/magazine/ammo_stack/a80/loaded
 	start_empty = FALSE

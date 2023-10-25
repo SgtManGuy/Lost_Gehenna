@@ -101,3 +101,13 @@
 	projectile_type = /obj/projectile/bullet/incendiary/a276
 	stack_type = /obj/item/ammo_box/magazine/ammo_stack/a276/inc
 
+/obj/item/ammo_casing/a80
+	name = ".80 Musket Ball"
+	desc = "A 20mm musket ball"
+	icon_state = "c762"
+	base_icon_state = "c762"
+	world_icon_state = "762-casing"
+	caliber = CALIBER_80
+	projectile_type = /obj/projectile/bullet/a80
+	stack_type = /obj/item/ammo_box/magazine/ammo_stack/a80
+

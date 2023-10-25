@@ -4,7 +4,7 @@
 
 /datum/sprite_accessory/hair/septic
 	icon = 'modular_septic/icons/mob/human/sprite_accessory/hair.dmi'
-
+/*
 /datum/sprite_accessory/hair/septic/pigtails4
 	name = "Pigtails 4"
 	icon_state = "hair_pigtailss"
@@ -340,3 +340,4 @@
 /datum/sprite_accessory/hair/septic/postal
 	name = "Postal"
 	icon_state = "hair_postal"
+*/

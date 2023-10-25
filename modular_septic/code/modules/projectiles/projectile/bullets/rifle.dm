@@ -66,3 +66,8 @@
     explosion(target, devastation_range = 0, heavy_impact_range = 0, light_impact_range = 0, flame_range = 1, silent = TRUE, adminlog = FALSE, explosion_cause = src)
     return BULLET_ACT_HIT
 */
+
+/obj/projectile/bullet/a80
+    damage = 60
+    wound_bonus = 10
+    wound_falloff_tile = -1

@@ -318,31 +318,7 @@
 		playsound(user, suppressed_sound, suppressed_volume, vary_fire_sound, ignore_walls = FALSE, extrarange = SILENCED_SOUND_EXTRARANGE, falloff_distance = 0)
 	else
 		playsound(user, fire_sound, fire_sound_volume, vary_fire_sound)
-		if(message)
-			if(pointblank)
-				if(ismob(target))
-					user.visible_message(span_danger("<b>[user]</b> fires [src] point blank at <b>[target]</b>!"), \
-									span_danger("I fire [src] point blank at <b>[target]</b>!"), \
-									span_hear("I hear a gunshot!"), COMBAT_MESSAGE_RANGE, target)
-					to_chat(target, span_userdanger("<b>[user]</b> fires [src] point blank at me!"))
-				else
-					user.visible_message(span_danger("<b>[user]</b> fires [src] point blank at [target]!"), \
-									span_danger("I fire [src] point blank at [target]!"), \
-									span_hear("I hear a gunshot!"), COMBAT_MESSAGE_RANGE, target)
-				if(pb_knockback > 0 && ismob(target))
-					var/mob/mob_target = target
-					var/atom/throw_target = get_edge_target_turf(mob_target, user.dir)
-					mob_target.throw_at(throw_target, pb_knockback, 2)
-			else
-				if(ismob(target))
-					user.visible_message(span_danger("<b>[user]</b> fires [src] at <b>[target]</b>!"), \
-									span_danger("I fire [src] at <b>[target]</b>!"), \
-									span_hear("I hear a gunshot!"), COMBAT_MESSAGE_RANGE, target)
-				else
-					user.visible_message(span_danger("<b>[user]</b> fires [src] at [target]!"), \
-									span_danger("I fire [src] at [target]!"), \
-									span_hear("I hear a gunshot!"), COMBAT_MESSAGE_RANGE, target)
-
+		
 	if(weapon_weight >= WEAPON_HEAVY)
 		if(!SEND_SIGNAL(src, COMSIG_TWOHANDED_WIELD_CHECK) && (GET_MOB_ATTRIBUTE_VALUE(user, STAT_STRENGTH) < 20))
 			user.dropItemToGround(src)

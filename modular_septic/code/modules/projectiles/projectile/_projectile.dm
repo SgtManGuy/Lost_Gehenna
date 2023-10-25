@@ -80,19 +80,18 @@
 	if(ismob(target) && (result == BULLET_ACT_HIT))
 		var/embed_attempt = SEND_SIGNAL(src, COMSIG_PROJECTILE_TRY_EMBED, firer, target, result, mode)
 		if(embed_attempt & COMPONENT_EMBED_SUCCESS)
-			SEND_SIGNAL(target, COMSIG_CARBON_ADD_TO_WOUND_MESSAGE, span_danger(" <i>\The [name] embeds!</i>"))
+			SEND_SIGNAL(target, COMSIG_CARBON_ADD_TO_WOUND_MESSAGE)
 		else if(embed_attempt & COMPONENT_EMBED_FAILURE)
 			if(embed_attempt & COMPONENT_EMBED_STOPPED_BY_ARMOR)
-				SEND_SIGNAL(target, COMSIG_CARBON_ADD_TO_WOUND_MESSAGE, span_danger(" <i>\The [name] [p_are()] stopped by armor!</i>"))
+				SEND_SIGNAL(target, COMSIG_CARBON_ADD_TO_WOUND_MESSAGE)
 				mode = PROJECTILE_PIERCE_NONE
 			else if(embed_attempt & COMPONENT_EMBED_WENT_THROUGH)
-				SEND_SIGNAL(target, COMSIG_CARBON_ADD_TO_WOUND_MESSAGE, span_danger(" <i>\The [name] go[p_es()] through!</i>"))
+				SEND_SIGNAL(target, COMSIG_CARBON_ADD_TO_WOUND_MESSAGE)
 	SEND_SIGNAL(target, COMSIG_CARBON_CLEAR_WOUND_MESSAGE)
 	// EXPERIMENTAL: Removed wound messages for projectiles
 	if(hit_text)
 		target.visible_message("[hit_text]", \
 			self_message = "[target_hit_text]", \
-			blind_message = span_hear("I hear something piercing flesh!"), \
 			vision_distance = COMBAT_MESSAGE_RANGE)
 	if((result == BULLET_ACT_FORCE_PIERCE) || (mode == PROJECTILE_PIERCE_HIT))
 		if(damage <= 0)
@@ -184,9 +183,6 @@
 		if(impact_effect_type && !hitscan)
 			new impact_effect_type(target_location, hitx, hity)
 
-		var/organ_hit_text = ""
-		if(zone_hit)
-			organ_hit_text = " in \the [parse_zone(zone_hit)]"
 		if(suppressed == SUPPRESSED_VERY)
 			if(final_hitsound)
 				playsound(target, final_hitsound, 5, TRUE, -1)
@@ -194,13 +190,10 @@
 			sound_hint()
 			if(final_hitsound)
 				playsound(target, final_hitsound, 5, TRUE, -1)
-			target_hit_text = span_userdanger("I'm hit by \the [src][organ_hit_text]!")
 		else
 			sound_hint()
 			if(final_hitsound)
 				playsound(target, final_hitsound, final_hitsound_volume, TRUE, -1)
-			hit_text = span_danger("<b>[living_target]</b> is hit by \the [src][organ_hit_text]!")
-			target_hit_text = span_userdanger("I'm hit by \the [src][organ_hit_text]!")
 		living_target.on_hit(src)
 
 	var/reagent_note
@@ -211,8 +204,6 @@
 
 	if(ismob(firer))
 		log_combat(firer, living_target, "shot", src, reagent_note)
-	else
-		living_target.log_message("has been shot by [firer] with [src]", LOG_ATTACK, color="orange")
 
 	return BULLET_ACT_HIT
 
@@ -228,10 +219,6 @@
 
 /obj/projectile/on_range()
 	SEND_SIGNAL(src, COMSIG_PROJECTILE_RANGE_OUT)
-	if(suppressed < SUPPRESSED_QUIET)
-		var/turf/turf_loc = get_turf(src)
-		if(istype(turf_loc))
-			visible_message(span_danger("[src] hits [turf_loc]!"))
 	if(isturf(loc))
 		process_hit(loc, loc, loc)
 	if(!QDELETED(src))
