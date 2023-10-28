@@ -104,9 +104,9 @@
 /obj/item/ammo_casing/a80
 	name = ".80 Musket Ball"
 	desc = "A 20mm musket ball"
-	icon_state = "c762"
-	base_icon_state = "c762"
-	world_icon_state = "762-casing"
+	icon_state = "a80"
+	base_icon_state = "a80"
+	world_icon_state = "a80"
 	caliber = CALIBER_80
 	projectile_type = /obj/projectile/bullet/a80
 	stack_type = /obj/item/ammo_box/magazine/ammo_stack/a80

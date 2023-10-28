@@ -71,3 +71,4 @@
     damage = 60
     wound_bonus = 10
     wound_falloff_tile = -1
+

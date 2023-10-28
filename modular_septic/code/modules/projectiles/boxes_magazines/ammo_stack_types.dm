@@ -281,9 +281,9 @@
 //Musket/Flintlock Ammo Stacks
 /obj/item/ammo_box/magazine/ammo_stack/a80
 	name = ".80 Musket Balls"
-	icon_state = "c762-1"
-	base_icon_state = "c762"
-	world_icon_state = "762-casing"
+	icon_state = "a80-1"
+	base_icon_state = "a80"
+	world_icon_state = "a80"
 	caliber = CALIBER_80
 	max_ammo = 8
 	ammo_type = /obj/item/ammo_casing/a80

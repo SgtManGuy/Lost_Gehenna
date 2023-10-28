@@ -331,9 +331,6 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	if(SSinput.initialized)
 		set_macros()
 
-	//SEPTIC EDIT BEGIN
-	src << browse_rsc(file('html/assets/statbg.png'))
-	//SEPTIC EDIT END
 	// Initialize tgui panel
 	src << browse(file('html/statbrowser.html'), "window=statbrowser")
 	addtimer(CALLBACK(src, .proc/check_panel_loaded), 30 SECONDS)

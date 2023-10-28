@@ -7,16 +7,15 @@
 @use 'sass:meta';
 
 @use '../colors.scss' with (
-  $primary: #5bc48a,
-  $good: #90ffc2,
+  $primary: #363636,
+  $good: #42ff29,
   $average: #c89f61,
   $bad: #980f0f,
   $fg-map-keys: (),
   $bg-map-keys: (),
 );
 @use '../base.scss' with (
-  $color-bg: #005231,
-  $color-bg-grad-spread: 6%,
+  $color-bg: #2c2c2c,
 );
 
 .theme-quake {
@@ -26,45 +25,45 @@
   // Components
   @include meta.load-css('../components/Button.scss', $with: (
     'color-default': colors.$primary,
-    'color-disabled': #466357,
-    'color-selected': #56fea1,
+    'color-disabled': #a29493,
+    'color-selected': #453734,
     'color-caution': #731f97,
     'color-danger': #9d001d,
   ));
   @include meta.load-css('../components/Input.scss', $with: (
-    'border-color': #87ce87,
+    'border-color': #e9dac7,
   ));
   @include meta.load-css('../components/NoticeBox.scss', $with: (
-    'background-color': #007434,
+    'background-color': #b9ab99,
   ));
   @include meta.load-css('../components/BlockQuote.scss', $with: (
-    'color-default': #a7dfff,
+    'color-default': #e9cf9e,
   ));
   @include meta.load-css('../components/NumberInput.scss', $with: (
-    'border-color': #87ce87,
+    'border-color': #e9dac7,
   ));
   @include meta.load-css('../components/ProgressBar.scss', $with: (
     'background-color': rgba(0, 0, 0, 0.5),
   ));
   @include meta.load-css('../components/Section.scss', $with: (
-    'title-text-color': #a7dfff,
-    'separator-color': #6cb9e6,
+    'title-text-color': #e9cf9e,
+    'separator-color': #d3b988,
   ));
   @include meta.load-css('../components/Tooltip.scss', $with: (
-    'color': #a7dfff,
-    'background-color': #003924,
+    'color': #e9cf9e,
+    'background-color': #e9dac7,
   ));
 
   // Layouts
   @include meta.load-css('../layouts/Layout.scss');
   @include meta.load-css('../layouts/Window.scss');
   @include meta.load-css('../layouts/TitleBar.scss', $with: (
-    'text-color': #abcce1,
-    'background-color': #112f23,
+    'text-color': #e9cf9e,
+    'background-color': #726b61,
   ));
 
   .Layout__content {
-    color: #8fd6ff;
+    color: #d6bb89;
     background-image: url('../../assets/scanlines.png');
     background-repeat: repeat;
     background-size: auto;

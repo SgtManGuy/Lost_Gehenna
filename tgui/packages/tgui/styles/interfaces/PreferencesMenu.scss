@@ -130,7 +130,7 @@ $department_map: (
 
   &__papersplease {
     font-family: "Courier New";
-    color: rgb(69, 55, 52);
+    color: #453734;
     background: rgb(237, 224, 216);
     padding-left: 8px;
     padding-right: 12px;
@@ -264,7 +264,7 @@ $department_map: (
       }
       &__right {
         font-family: "Courier New";
-        color: rgb(69, 55, 52);
+        color: rgb(69, 54, 51);
         background: rgb(237, 224, 216);
         border-right: 2px solid rgb(162, 148, 145);
         border-radius: 0 3px 0 0;
@@ -345,8 +345,8 @@ $department_map: (
             border-right: 2px dotted colors.fg($color-value);
           }
 
-          color: rgb(230, 219, 214);
-          background: rgb(162, 148, 147);
+          color: #e6dbd6;
+          background: #a29493;
           font-family: "Tahoma";
           border-bottom: 2px solid rgba(0, 0, 0, 0.3);
           border-left: 2px solid rgba(0, 0, 0, 0.3);
@@ -362,7 +362,7 @@ $department_map: (
           }
 
           .options {
-            background: rgba(233, 218, 199, 1);
+            background: #e9dac7;
             height: 100%;
           }
         }

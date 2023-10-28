@@ -5,7 +5,6 @@
 /obj/item/knife/combat
 	carry_weight = 800 GRAMS
 
-//Horrible
 /obj/item/knife/combat/zhunter
 	name = "z-hunter brand knife"
 	desc = "Illegal in the Separated Kingdom, this surplus knife is barely able to cut through skin. It can, however, hunt many Z's."
@@ -20,7 +19,6 @@
 	wound_bonus = 0
 	bare_wound_bonus = 5
 
-//Nice sexy sex
 /obj/item/melee/truncheon
 	name = "truncheon"
 	desc = "A tool to beat the bones out of criminals."

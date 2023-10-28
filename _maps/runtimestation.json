@@ -3,7 +3,18 @@
 	"map_name": "Runtime Station",
 	"map_path": "map_files/debug",
 	"map_file": "runtimestation.dmm",
+	"space_ruin_levels": 0,
+    "space_empty_levels": 0,
+    "surface_ruin_levels": 0,
+    "surface_empty_levels": 0,
+    "cave_ruin_levels": 0,
+    "cave_empty_levels": 0,
+	"dynamic_forced_roundstart_rulesets": [
+		"/datum/dynamic_ruleset/roundstart/gehenna"
+	],
+    "minetype": "none",
 	"shuttles": {
 		"cargo": "cargo_delta"
 	}
+
 }

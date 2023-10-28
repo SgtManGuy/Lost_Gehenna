@@ -21,7 +21,7 @@
 	tetris_width = 128
 	tetris_height = 64
 
-// Winter Genocide Nigga Killer-49
+// Winter Genocide Killer-49
 /obj/item/gun/ballistic/automatic/remis/winter
 	name = "\improper Inverno Genocídio NK-49 Assault Rifle"
 	desc = "Inverno Genocídio, 'Winter Genocide' Assault Rifle firing in 5.56. Used by Ordin- Ordinat... ORDINATORS KILL THIS BASTARD!"
@@ -391,49 +391,6 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/federson
 	rack_delay = 4
 
-//BASE BREAK ACTION RIFLE
-/obj/item/gun/ballistic/rifle/breakaction
-	worn_icon = 'modular_septic/icons/obj/items/guns/worn/back.dmi'
-	icon = 'modular_septic/icons/obj/items/guns/48x32.dmi'
-	lefthand_file = 'modular_septic/icons/obj/items/guns/inhands/rifle_lefthand.dmi'
-	righthand_file = 'modular_septic/icons/obj/items/guns/inhands/rifle_righthand.dmi'
-	pb_knockback = 0
-	empty_icon_state = FALSE
-	bolt_type = BOLT_TYPE_BREAK_ACTION
-	can_suppress = FALSE
-	safety_flags = NONE
-	semi_auto = TRUE
-	cylinder_shows_open = TRUE
-
-/obj/item/gun/ballistic/rifle/breakaction/musket
-	name = "Musket"
-	desc = "A powerful long ranged weapon able to put big holes into things."
-	icon = 'modular_septic/icons/obj/items/guns/musket.dmi'
-	inhand_icon_state = "musket"
-	base_icon_state = "musket"
-	icon_state = "musket"
-	worn_icon_state = "musket"
-	wielded_inhand_state = "musket"
-	w_class = WEIGHT_CLASS_HUGE
-	weapon_weight = WEAPON_MEDIUM
-	bolt_wording = "hammer"
-	cylinder_wording = "barrel"
-	rack_sound = list(
-		'modular_septic/sound/weapons/guns/revolver/hammer1.ogg', \
-		'modular_septic/sound/weapons/guns/revolver/hammer2.ogg', \
-	)
-	drop_sound = 'modular_septic/sound/weapons/guns/drop_lightgun.wav'
-	// close cylinder sound
-	lock_back_sound = 'modular_septic/sound/weapons/guns/shotgun/db_in.wav'
-	// open cylinder sound
-	bolt_drop_sound = 'modular_septic/sound/weapons/guns/shotgun/db_out.wav'
-	fire_sound = list('modular_septic/sound/weapons/guns/shotgun/comgun1.wav', 'modular_septic/sound/weapons/guns/shotgun/comgun2.wav')
-	load_sound = 'modular_septic/sound/weapons/guns/shotgun/db_load.wav'
-	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/musket
-	slot_flags = ITEM_SLOT_BACK
-	tetris_width = 64
-	tetris_height = 32
-
 //G36
 /obj/item/gun/ballistic/automatic/remis/g36
 	name = "\improper Perdedor 5.56 Void International Assault Rifle"
@@ -483,3 +440,44 @@
 	full_auto = TRUE
 	foldable = TRUE
 	folded = FALSE
+
+//BASE BREAK ACTION RIFLE
+/obj/item/gun/ballistic/rifle/boltaction/musket
+	lefthand_file = 'modular_septic/icons/obj/items/guns/inhands/rifle_lefthand.dmi'
+	righthand_file = 'modular_septic/icons/obj/items/guns/inhands/rifle_righthand.dmi'
+	pb_knockback = 0
+	empty_icon_state = FALSE
+	can_suppress = FALSE
+	safety_flags = NONE
+	semi_auto = TRUE
+	cylinder_shows_open = TRUE
+	cylinder_shows_ammo_count = TRUE
+
+/obj/item/gun/ballistic/rifle/boltaction/musket/b11
+	name = "Musket"
+	desc = "A powerful long ranged weapon able to put big holes into things."
+	icon = 'modular_septic/icons/obj/items/guns/musket.dmi'
+	inhand_icon_state = "musket"
+	base_icon_state = "musket"
+	icon_state = "musket"
+	worn_icon_state = "musket"
+	wielded_inhand_state = "musket"
+	w_class = WEIGHT_CLASS_HUGE
+	weapon_weight = WEAPON_MEDIUM
+	bolt_wording = "hammer"
+	cylinder_wording = "barrel"
+	rack_sound = list(
+		'modular_septic/sound/weapons/guns/revolver/hammer1.ogg', \
+		'modular_septic/sound/weapons/guns/revolver/hammer2.ogg', \
+	)
+	drop_sound = 'modular_septic/sound/weapons/guns/drop_lightgun.wav'
+	// close cylinder sound
+	lock_back_sound = 'modular_septic/sound/weapons/guns/shotgun/db_in.wav'
+	// open cylinder sound
+	bolt_drop_sound = 'modular_septic/sound/weapons/guns/shotgun/db_out.wav'
+	fire_sound = list('modular_septic/sound/weapons/guns/shotgun/comgun1.wav', 'modular_septic/sound/weapons/guns/shotgun/comgun2.wav')
+	load_sound = 'modular_septic/sound/weapons/guns/shotgun/db_load.wav'
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/musket
+	slot_flags = ITEM_SLOT_BACK
+	tetris_width = 64
+	tetris_height = 32

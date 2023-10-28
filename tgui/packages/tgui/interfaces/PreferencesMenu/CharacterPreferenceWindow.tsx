@@ -118,11 +118,6 @@ export const CharacterPreferenceWindow = (props, context) => {
               Buy BYOND premium for an extra 5 slots!
             </Stack.Item>
           )}
-          {!data.donator_rank && (
-            <Stack.Item align="center">
-              Support Septic Shock on patreon for an extra 5 slots!
-            </Stack.Item>
-          )}
 
           <Stack.Divider />
 

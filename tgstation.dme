@@ -4523,7 +4523,6 @@
 #include "modular_septic\code\game\objects\items\handcuffs.dm"
 #include "modular_septic\code\game\objects\items\keys.dm"
 #include "modular_septic\code\game\objects\items\mop.dm"
-#include "modular_septic\code\game\objects\items\plushes.dm"
 #include "modular_septic\code\game\objects\items\shit.dm"
 #include "modular_septic\code\game\objects\items\shrapnel.dm"
 #include "modular_septic\code\game\objects\items\toothbrush.dm"
